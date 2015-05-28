@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  div.full-wrapper
+    div.bd-container
+      div(class="portfolio-thumb col")
+        ul
+          each val, index in item.imgs
+            li
+              a(id="#{val._id}" href="##{val._id}") 
+                img(src="#{val.path_d}")
+      div.portfolio-content
+        h3(class="entry-title") #{item.title}
+        div.entry-content
+          pre #{item.desc}

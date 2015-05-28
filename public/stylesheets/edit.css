@@ -1,0 +1,106 @@
+/** 编辑页样式 **/
+
+input,input:focus,textarea,select,button{outline: none;}
+
+/** 上传按钮 **/
+.inputfile-wrap{
+  position: relative;
+}
+.inputfile-wrap .file-btn{
+  position: absolute;top: 0px;left: 0px;width: 234px;height: 37px;opacity: 0;z-index: 10;
+  cursor: pointer;
+}
+
+
+.ed-btn1,.ed-btn2{
+  display: inline-block;
+  width:232px;height: 35px;
+  font-size:18px;line-height:35px;
+  text-align:center;color: #fff;background:#000;
+  border: none;
+  cursor: pointer;
+}
+.ed-btn2,.ed-btn1:hover{background:#e90000;}
+
+/** logo编辑区 **/
+.ed-logo{width:230px;margin-right: 10px;float: left;}
+.ed-logo .ed-img{width: 100%;height: 230px;background:#000;}
+.ed-logo .ed-act{margin-top:18px;}
+.ed-logo .ok,.ed-logo .cancel{
+  width:110px;height: 32px;
+  font-size:18px;
+  border:none;
+  background: #e90000;color:#fff;
+}
+.ed-logo .cancel{margin-left:5px;background:#707070;}
+
+/** tags编辑区 **/
+.ed-tags{float: left;width:740px;font-size: 18px;}
+.ed-tag-item{
+  position: relative;
+  padding-left:15px;
+  height: 50px;
+  margin-bottom:10px;
+  background:#bdbdbd;
+  color:#fff;
+  line-height: 50px;
+}
+.ed-tag-item .txt-input{
+  height: 40px;width: 250px;
+  margin-top:4px;
+  padding: 0px;
+  border:none;vertical-align: top;
+}
+.ed-tags .edt-act{float: right;background:#707070;padding:0 30px;cursor: pointer;}
+.ed-tags .edt-close{float: right;background:#000;padding:0 20px;cursor: pointer;}
+.ed-tag-add{
+  height: 50px;line-height: 50px;
+  border:1px dashed #939393;color:#bdbdbd;
+  text-align: center;
+  cursor: pointer;
+}
+
+/** 编辑区列表 **/
+.ed-isolist{margin-top:20px;}
+.edlist-act{text-align: right;}
+
+/** 表单 **/
+.form-horizontal .form-group{margin-bottom: 10px;}
+.form-horizontal .control-label{
+  float:left;
+  width:110px;margin-top:7px;
+  margin-right:25px;
+  text-align: right;
+}
+.form-horizontal .control-wrap{
+  position: relative;
+  width:740px;float:left;
+}
+.control-wrap .form-control{
+  display: block;width:100%;height: 34px;padding:6px 12px;color:#555;
+  border:1px solid #999494;border-radius: 4px;
+}
+
+
+/** 图片txt list **/
+.imgtxt-list{
+  width:440px;
+  margin-top:20px;
+  background:#e8e8e8;
+  border-top:1px solid #d0d0d0;
+  font-size:12px;
+}
+.imgtxt-list .imgtxt{
+  position: relative;
+  height: 35px;
+  line-height: 35px;
+  padding-left:18px;
+  border:1px solid #d0d0d0;border-top:none;
+}
+.imgtxt-list .img-act{
+  float:right;
+}
+.imgtxt-list .img-act a{margin-right: 18px;text-decoration: none;}
+.imgtxt-list .img-act a:hover{text-transform: none;}
+
+.edt-hide{display: none;}

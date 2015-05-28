@@ -1,0 +1,20 @@
+
+extends layout
+
+
+block content
+
+  div(id="pg_home" _x='nb')
+  div.full-wrapper
+    if (items)
+      div(class="bd-container clearfix")
+        each val, index in items
+          div(class="isotope-item #{val.type}" display="none")
+            a(title="" href="/d/#{val._id}")
+              div(class="iop-overlay")
+                div(class="iop-con")
+                  p #{val.label}
+                  s(class="iop-rad")
+              div(class="iop-thumb")
+                img(src="#{val.img}")
+      

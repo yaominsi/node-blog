@@ -1,0 +1,35 @@
+extends edit_layout
+extends edit_layout
+
+block content
+  form(id="item_edit_form" action="/about/submit" class="form-horizontal" method="post")
+    input(type="hidden" name="imgids" id="imgids_hidden" value="#{item.imgids}")
+    div(class="form-group clearfix")
+      label(class="control-label") 图片
+      div(class="control-wrap")
+        div(class="inputfile-wrap")
+          input(type="file" class="file-btn" value="上传" accept=".jpg,.png")
+          input(type="text" class="ed-btn1" value="上传")
+        ul(class="imgtxt-list" id="img_list_ul")
+          if (item && item.imgs)
+            each val, index in item.imgs
+              li(class="imgtxt" id="#{val._id}")
+                span.img-name #{val.filename}
+                div.img-act
+                  a(class="icon t-btn J_Top") top
+                  a(class="icon b-btn J_Btm") bottom
+                  a(target="_blank" href="#{val.path}" class="J_Preview") 预览
+                  a(href="javascript:void(0);" class="J_Del") 删除
+    div(class="form-group clearfix")
+      label(class="control-label") 完整标题
+      div(class="control-wrap")
+        input(type="text" class="form-control" id="" name="title" placeholder="完整标题" value="#{item.title}")
+    div(class="form-group clearfix")
+      label(class="control-label") 描述
+      div(class="control-wrap")
+        textarea(class="form-txtarea" name="desc") #{item.desc}
+    
+    div(class="form-group clearfix" style="margin-top:50px;")
+      label(class="control-label")
+      div.control-wrap
+        input(type="submit" value="保存" class="ed-btn2")

@@ -1,0 +1,34 @@
+/**
+ * 首页样式
+ **/
+
+/** 首页item **/
+.isotope-item{
+	float:left;width:290px;margin:0 5px 10px;z-index: 2;
+	position: relative;
+}
+.isotope-item a{display: block;}
+.isotope-item .iop-overlay{
+	position: absolute;
+	display:none;
+	top:0;
+	right:0;
+	width: 100%;
+	height:100%;
+	opacity: .7;
+	font-size: 14px;
+	line-height: 21px;
+	text-align: center;
+	color: #CFD8DB;
+	background:#2C3033;
+}
+.iop-overlay .iop-con{position: absolute;width:100%;left:0px;top:50%;margin-top:-50px;}
+.iop-overlay p{color:#fff;}
+.iop-overlay .iop-rad{
+	display: block;width:60px;height: 60px;margin: 20px auto;
+	background: url('/images/rad.png');
+}
+.isotope-item .iop-thumb{margin-bottom:-3px;}
+.isotope-item img{width:100%;}
+
+.isotope-item:hover .iop-overlay{display:block;}

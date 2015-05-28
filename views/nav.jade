@@ -1,0 +1,38 @@
+extends edit_layout
+
+block content
+  form(id="item_edit_form" action="/nav/save" class="form-horizontal" method="post")
+    input(type="hidden" id="imgids_hidden" name="_ids")
+    div(class="form-group clearfix")
+      label(class="control-label") 导航列表
+      div(class="control-wrap")
+        ul(class="imgtxt-list" id="img_list_ul")
+          if (items)
+            each val, index in items
+              li(class="imgtxt" id="#{val._id}")
+                span.img-name #{val.label}
+                div.img-act
+                  a(class="icon t-btn J_Top") top
+                  a(class="icon b-btn J_Btm") bottom
+                  a(href="javascript:void(0);" class="J_Del") 删除
+                  a(href="javascript:void();" class="J_Edit" _id='#{val._id}' label='#{val.label}') 编辑
+    
+    div(class="form-group clearfix" style="margin-top:50px;")
+      label(class="control-label")
+      div.control-wrap
+        input(type="submit" value="保存" class="ed-btn2")
+  //
+  div.hc-sep
+    s.hcs-rad
+  //
+  form(id="xx" action="/nav/a/save" class="form-horizontal" method="post")
+    input(type="hidden" name="_id" id="nav_id_input")
+    div(class="form-group clearfix")
+      label(class="control-label") 导航
+      div(class="control-wrap")
+        input(type="text" name="label" placeholder="label" id="nav_label_input")
+    
+    div(class="form-group clearfix" style="margin-top:50px;")
+      label(class="control-label")
+      div.control-wrap
+        input(type="submit" value="新增" class="ed-btn2" id="nav_save_btn")

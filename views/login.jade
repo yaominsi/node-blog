@@ -1,0 +1,15 @@
+
+extends layout
+
+
+block content
+  div.full-wrapper
+    div(class="bd-container clearfix")
+      form(action='/auth',method='POST')
+        div(style="text-align:center;margin-top:20%")
+          div 你是？
+            input(name='name',placeholder='糊啊油')
+          br
+          div 暗号？
+            input(name='pwd',placeholder='我不说~')
+          input(type='submit')  

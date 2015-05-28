@@ -1,0 +1,44 @@
+doctype html
+html
+  head
+    title #{title}
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/stylesheets/reset.css')
+    link(rel='stylesheet', href='/stylesheets/layout.css')
+    link(rel='stylesheet', href='/stylesheets/index.css')
+    link(rel='stylesheet', href='/stylesheets/detail.css')
+    link(rel='stylesheet', href='/stylesheets/about.css')
+    link(rel='stylesheet', href='/stylesheets/edit.css')
+    script(src="/javascripts/jquery.js")
+    script(src="/javascripts/isotope.js")
+    script(src="/javascripts/app.js")
+    script(src="/javascripts/edit.js")
+    
+  body
+    div.primary-container
+      div.header-container
+        div.branding
+          div.logo
+            a(href="/about" title="" rel="home")
+              img(src="/images/logo.png" class="logo-uploaded" alt="logo")
+        div.hc-sep
+          s.hcs-rad
+        nav.filter-container
+          ul(class="filter" id="filters")
+            li(data-filter="*" class="active")
+              a(href="/#*")= 'All'
+            if (navs)
+              each nav,index in navs
+                li(data-filter=".#{nav._id}")
+                  a(href="/##{nav._id}") #{nav.label}
+          //登录信息
+        if (user)
+          div.hc-sep
+            s.hcs-rad
+          nav.filter-container
+            ul(class="filter") #{user.name}
+              if (ops)
+                each val, index in ops
+                  li 
+                    a(href="#{val.uri}") #{val.label}
+      block content

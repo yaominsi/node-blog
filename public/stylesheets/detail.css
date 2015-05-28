@@ -1,0 +1,14 @@
+/**
+ * detail详情页样式
+ */
+
+ /** 作品展示 **/
+.portfolio-thumb{width:100%;}
+.portfolio-thumb ul{margin-right:300px;}
+.portfolio-thumb img{width:100%;}
+
+
+/** 简单描述 **/
+.portfolio-content{width:290px;position: absolute;top:0px;right: 0px;color:#939393;}
+.entry-title{text-align: right;font-size: 18px;}
+.entry-content{margin-top:10px;line-height: 26px;}
