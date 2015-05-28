@@ -6,6 +6,7 @@ var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
+var app_config=require('./lib/app_config.js').AppConfig;
 
 var app = express();
 
@@ -21,7 +22,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(express.static(path.join(__dirname, 'public')));
 console.log(path.join(__dirname, 'public'));
-app.use(express.static('/Users/siyaomin/tmp'));
+app.use(express.static(app_config.static_img_path));
 
 var cookieSession = require('cookie-session');
 app.use(cookieSession({
