@@ -1,7 +1,3 @@
-item:{
-	id:1,
-	title:'title',
-	label:'label',
-	ordering:1,
-	desc:11
+{
+	'如何使用':'go to  wiki'
 }
