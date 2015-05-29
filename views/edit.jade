@@ -20,7 +20,7 @@ block content
       label(class="control-label") 分类
       div(class="control-wrap")
         select(name="type" selected="#{item.type}") 
-          option(value='')选择已有的类别
+          option(value='') 选择已有的类别
           if (navs)
             each val,index in navs
               if (item && val._id==item.type)
