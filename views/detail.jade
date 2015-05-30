@@ -14,9 +14,9 @@ block content
       div(class="portfolio-thumb col")
         ul
           each val, index in item.imgs
-            li
+            li()
               a(id="#{val._id}" href="##{val._id}") 
-                img(src="" data-layzr="#{val.path_d}" height="#{val.d_height}")
+                img(src="/images/loading.jpeg" data-layzr="#{val.path_d}" height="#{val.d_height}" alt='#{val.filename}')
       div.portfolio-content
         h3(class="entry-title") #{item.title}
         div.entry-content

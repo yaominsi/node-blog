@@ -1,4 +1,5 @@
 $(window).load(function(){
+
   var init_params={
       itemSelector: '.isotope-item',
       layoutMode: 'masonry'
@@ -21,7 +22,8 @@ $(window).load(function(){
   }
 
   var iso = $('.bd-container').isotope(init_params);
-  
+  var layzr = new Layzr(function(){
+  });
 
    $('#filters li').on('click', function(event) {
     event.stopPropagation();
@@ -39,5 +41,5 @@ $(window).load(function(){
     $('#nav_label_input').val(t.attr('label'));
     $('#nav_save_btn').val('修改');
   });
-  var layzr = new Layzr();
+  
 });
