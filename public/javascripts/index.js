@@ -16,21 +16,23 @@ $(window).load(function(){
     }else{
       init_params.filter= "."+filterValue;
     }
-    
   }else{
     init_params.filter= "*";
   }
 
   var iso = $('.bd-container').isotope(init_params);
-  var layzr = new Layzr(function(){
-  });
+  var layzr = new Layzr();
 
-   $('#filters li').on('click', function(event) {
-    event.stopPropagation();
+  $('#filters li').on('click', function(event) {
+    //event.stopPropagation();
     $('#filters li').removeClass('active');
     var filterValue = $( this ).attr('data-filter');
     iso.isotope({ filter: filterValue });
     $(this).addClass('active');
+    setTimeout(function(){
+      var layzr = new Layzr();
+    }, 500);
+    
   });
 
   //
