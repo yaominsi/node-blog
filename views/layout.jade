@@ -5,15 +5,9 @@ html
     link(rel='stylesheet', href='/stylesheets/style.css')
     link(rel='stylesheet', href='/stylesheets/reset.css')
     link(rel='stylesheet', href='/stylesheets/layout.css')
-    link(rel='stylesheet', href='/stylesheets/index.css')
-    link(rel='stylesheet', href='/stylesheets/detail.css')
-    link(rel='stylesheet', href='/stylesheets/about.css')
-    link(rel='stylesheet', href='/stylesheets/edit.css')
-    script(src="/javascripts/jquery.js")
-    script(src="/javascripts/isotope.js")
-    script(src="/javascripts/app.js")
-    script(src="/javascripts/edit.js")
     
+    script(src="/javascripts/jquery.js")
+    script(src="/javascripts/app.js")
   body
     div.primary-container
       div.header-container
@@ -42,3 +36,6 @@ html
                   li 
                     a(href="#{val.uri}") #{val.label}
       block content
+
+block js
+block css
